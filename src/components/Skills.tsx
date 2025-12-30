@@ -1,8 +1,8 @@
 import React from "react";
 import { SectionTitle } from "./ui/SectionTitle";
 import { SkillCard } from "./ui/SkillCard";
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiNextdotjs, SiTailwindcss, SiRedux, SiExpress, SiMongodb, SiCplusplus, SiGit, SiGithub, SiPostman, SiVite, SiVercel } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiNextdotjs, SiTailwindcss, SiRedux, SiExpress, SiMongodb, SiCplusplus, SiGit, SiGithub, SiPostman, SiVite, SiVercel, SiFigma, SiCanva, SiBlender } from "react-icons/si";
+import { FaNodeJs, FaMicrosoft } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 
 
@@ -24,6 +24,10 @@ const skills = [
   { name: "Postman", icon: SiPostman, color: "#ff6c37", url: "https://www.postman.com/" },
   { name: "Vite", icon: SiVite, color: "#646cff", url: "https://vitejs.dev/" },
   { name: "Vercel", icon: SiVercel, color: "#", url: "https://vercel.com/" },
+  { name: "Render", icon: SiBlender, color: "#f5792a", url: "https://www.blender.org/" },
+  { name: "Figma", icon: SiFigma, color: "#f24e1e", url: "https://www.figma.com/" },
+  { name: "Canva", icon: SiCanva, color: "#00c4cc", url: "https://www.canva.com/" },
+  { name: "MS Office", icon: FaMicrosoft, color: "#d83b01", url: "https://www.microsoft.com/en-us/microsoft-365" },
 ];
 
 export function Skills() {

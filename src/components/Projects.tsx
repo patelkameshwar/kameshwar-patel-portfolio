@@ -5,24 +5,31 @@ import { ProjectCard } from './ui/ProjectCard';
 const projects = [
   {
     title: 'MeetDoc-Online Doctor Appointment',
-    description: 'EdgeCareer.AI – An AI-powered career platform that generates ATS-friendly resumes, cover letters, and helps with interview preparation, ensuring job seekers stand out in the hiring process. ',
+    description: 'Built a full-stack appointment booking website and implemented three-level authentication for Patients, Doctors, and Admin. Patients can book and manage appointments, doctors can view appointments, earnings, and update profiles, while admins can manage doctors and appointments through a dedicated dashboard.',
     image: '/assets/meetdoc.png',
     link: 'https://presto-meetdoc.onrender.com',
-    tags: ['React 19', 'Node.js 15', 'Tailwind CSS', 'MongoDB', 'JWT Authentication'],
+    tags: ['React.js', 'Node.js', 'Express.js', 'Tailwind CSS', 'Express.js', 'MongoDB', 'Git & GitHub', 'Render'],
   },
   {
     title: 'TechieHelp',
-    description: 'TechieHelp is a platform founded by Kameshwar Patel that provides internships, career guidance, and tech services across various domains. It offers web development, app development, AI/ML solutions, UI/UX design, SEO, and more. TechieHelp also assists students with admissions, resume building, and placement preparation, making it a one-stop solution for tech enthusiasts and job seekers. ',
+    description: 'TechieHelp – Contributed to the development of TechieHelp’s core platform and website. Worked on web development, feature implementation, and platform enhancements for a platform providing internships, career guidance, AI/ML solutions, UI/UX, and placement support.',
     image: '/assets/Tech.png',
     link: 'https://techiehelp.netlify.app/',
-    tags: ['HTML', 'CSS', 'JavaScript'],
+    tags: ['React.js', 'Node.js', 'Tailwind CSS','Firebase'],
   },
   {
     title: 'OnlineChat',
-    description: 'TechieHelp is a platform founded by Kameshwar Patel that provides internships, career guidance, and tech services across various domains. It offers web development, app development, AI/ML solutions, UI/UX design, SEO, and more. TechieHelp also assists students with admissions, resume building, and placement preparation, making it a one-stop solution for tech enthusiasts and job seekers. ',
+    description: 'Developed a full-stack chat application using MongoDB, Express, React, Node.js, and Socket.IO for real-time messaging. The app allows users to send and receive messages instantly without page reloads, supporting seamless one-on-one communication. Implemented user authentication, message storage, and dynamic updates to create a smooth and interactive chat experience.',
     image: '/assets/onlinechat.png',
     link: 'https://quick-chat-opal.vercel.app/',
-    tags: ['HTML', 'CSS', 'JavaScript'],
+    tags: ['React.js', 'Node.js', 'Express.js', 'Socket.IO', 'MongoDB', 'Git & GitHub', 'Vercel'],
+  },
+  {
+    title: 'College Magzine',
+    description: 'TechieHelp is a platform founded by Kameshwar Patel that provides internships, career guidance, and tech services across various domains. It offers web development, app development, AI/ML solutions, UI/UX design, SEO, and more. TechieHelp also assists students with admissions, resume building, and placement preparation, making it a one-stop solution for tech enthusiasts and job seekers. ',
+    image: '/assets/canva.png',
+    link: 'https://www.canva.com/design/DAGmCsjYtTI/7n2crk0144raWALzqLqFQA/edit?utm_content=DAGmCsjYtTI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton',
+    tags: ['Canva'],
   },
 ];
 
