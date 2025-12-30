@@ -22,17 +22,15 @@ export function TypeWriter({
 
     const timeout = setTimeout(() => {
       if (!isDeleting) {
-        // Typing Effect
         if (currentText.length < word.length + 1) {
-          setCurrentText(word.slice(0, currentText.length) + "|"); // Keep the cursor at the end
+          setCurrentText(word.slice(0, currentText.length) + "|"); 
         } else {
-          // Pause before deleting (slightly shorter pause for fluidity)
           setTimeout(() => setIsDeleting(true), 1000);
         }
       } else {
         // Deleting Effect
         if (currentText.length > 1) {
-          setCurrentText(word.slice(0, currentText.length - 2) + "|"); // Keep the cursor at the end
+          setCurrentText(word.slice(0, currentText.length - 2) + "|"); 
         } else {
           setIsDeleting(false);
           setCurrentWordIndex((prev) =>
@@ -40,7 +38,7 @@ export function TypeWriter({
           );
         }
       }
-    }, isDeleting ? delay / 1.5 : delay); // Faster deleting for smoother transition
+    }, isDeleting ? delay / 1.5 : delay); 
 
     return () => clearTimeout(timeout);
   }, [currentText, isDeleting, currentWordIndex, words, delay, infinite]);
