@@ -19,29 +19,29 @@ export function Contact() {
 
             <div className="space-y-4">
               <a
-                href="mailto:deepakmodi8676@gmail.com"
+                href="mailto:patelkameshwar01@gmail.com"
                 className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
               >
                 <Mail className="w-6 h-6" />
-                <span>amitk25783@gmail.com</span>
+                <span>patelkameshwar01@gmail.com</span>
               </a>
               <a
-                href="https://github.com/amitkumardemo"
+                href="https://github.com/patelkameshwar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
               >
                 <Github className="w-6 h-6" />
-                <span>github.com/amitkumardemo</span>
+                <span>github.com/patelkameshwar</span>
               </a>
               <a
-                href="https://www.linkedin.com/in/amit-kumar-686196225/"
+                href="https://www.linkedin.com/in/patelkameshwar/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
               >
                 <Linkedin className="w-6 h-6" />
-                <span>linkedin.com/in/amit-kumar-686196225</span>
+                <span>linkedin.com/in/patelkameshwar</span>
               </a>
             </div>
           </div>

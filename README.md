@@ -1,6 +1,6 @@
-# Amit Kumar - Full Stack Role Portfolio Website 
+# Kameshwar Patel - Full Stack Role Portfolio Website
 
-Welcome to **My Portfolio**! This is my personal portfolio for showcasing my skills, projects, experience, education, certifications, and more. It’s built using React, TypeScript, Tailwind CSS, and other modern web technologies. It fetches data from various APIs to display the latest information, such as GitHub repositories, LeetCode submissions, and blogs. The portfolio is responsive, interactive, and optimized for performance.
+It fetches data from various APIs to display the latest information, such as GitHub repositories and blogs.
 
 
 
@@ -20,8 +20,7 @@ Welcome to **My Portfolio**! This is my personal portfolio for showcasing my ski
   - **Skills**: Displays my technical skills, organized by categories.
   - **Projects**: Showcase of personal and professional projects.
   - **GitHub**: Fetches and displays my GitHub repositories with a link to view the profile.
-  - **LeetCode**: Fetches and displays my LeetCode submissions.
-  - **Badges**: Displays badges from various platforms like GitHub, LeetCode, and HackerRank.
+  - **Badges**: Displays badges from various platforms like GitHub and HackerRank.
   - **Blogs**: Fetches and displays my blogs from Hashnode API.
   - **Experience**: Details about my work experience with a timeline layout.
   - **Education**: My academic journey including degree and institution.
@@ -126,4 +125,4 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 ---
 
 
-### 🔥 Made with ❤️ by **Amit kumar**
+### 🔥 Made with ❤️ by **Kameshwar Patel**

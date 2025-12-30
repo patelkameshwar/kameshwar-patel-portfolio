@@ -14,7 +14,7 @@ export function HandwritingAnimation() {
     >
       <svg
         viewBox="0 0 1158.6 200.001"
-        className="max-w-full max-h-full ml-16 md:ml-48" // Added responsive margin-left
+        className="max-w-full max-h-full ml-16 md:ml-48" 
       >
         {letterPaths.map((letter, index) => (
           <motion.path
@@ -32,12 +32,12 @@ export function HandwritingAnimation() {
             animate={{
               pathLength: 1,
               opacity: 1,
-              fill: animationCompleted ? "#3b82f6" : "transparent", // Apply fill only after all strokes
+              fill: animationCompleted ? "#3b82f6" : "transparent", 
             }}
             transition={{
               pathLength: {
-                duration: 1.5, // Stroke drawing duration
-                delay: index * 0.2, // Staggered animation
+                duration: 1.5, 
+                delay: index * 0.2, 
                 ease: [0.42, 0, 0.58, 1],
               },
               opacity: {
@@ -46,14 +46,14 @@ export function HandwritingAnimation() {
                 ease: "easeInOut",
               },
               fill: {
-                duration: 0.8, // Fill animation duration
-                delay: 0, // No delay, starts after last stroke
+                duration: 0.8, 
+                delay: 0, 
                 ease: "easeInOut",
               },
             }}
             className={`text-blue-600 dark:text-blue-400`}
             onAnimationComplete={() => {
-              // Trigger fill animation when the last stroke completes
+              
               if (index === letterPaths.length - 1) {
                 setAnimationCompleted(true);
               }

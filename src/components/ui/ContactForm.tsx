@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
 import { LuMessageSquareShare } from "react-icons/lu";
 
+type Status = 'idle' | 'submitting' | 'success' | 'error';
+
 export function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
+    _gotcha: '', // honeypot field for spam protection
   });
 
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<Status>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -19,28 +24,40 @@ export function ContactForm() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault();
     setStatus('submitting');
     setErrorMessage('');
 
     try {
-      const response = await fetch('https://formspree.io/f/mnnpbrvl', {
+      const response = await fetch('https://formspree.io/f/mykyvqya', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json', // IMPORTANT for Formspree
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', message: '' }); // Reset the form
+
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+          _gotcha: '',
+        });
+
+        // Redirect after success (1.5s delay)
+        setTimeout(() => {
+          window.location.href = '/thank-you'; // change if needed
+        }, 1500);
       } else {
         const errorData = await response.json();
-        setErrorMessage(errorData.error || 'Something went wrong. Please try again.');
+        setErrorMessage(errorData?.error || 'Something went wrong. Please try again.');
         setStatus('error');
       }
-    } catch (error) {
+    } catch {
       setErrorMessage('An unexpected error occurred. Please try again.');
       setStatus('error');
     }
@@ -48,6 +65,18 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+
+      {/* Honeypot field (hidden) */}
+      <input
+        type="text"
+        name="_gotcha"
+        value={formData._gotcha}
+        onChange={handleChange}
+        style={{ display: 'none' }}
+        tabIndex={-1}
+        autoComplete="off"
+      />
+
       <div>
         <label htmlFor="name" className="block text-sm font-medium mb-2">
           Name
@@ -60,7 +89,7 @@ export function ContactForm() {
           onChange={handleChange}
           required
           placeholder="Enter your name"
-          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
@@ -76,7 +105,7 @@ export function ContactForm() {
           onChange={handleChange}
           required
           placeholder="Enter your email"
-          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
@@ -90,9 +119,9 @@ export function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           required
-          placeholder="Enter your message"
           rows={4}
-          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          placeholder="Enter your message"
+          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
@@ -110,10 +139,15 @@ export function ContactForm() {
       </button>
 
       {status === 'success' && (
-        <p className="text-green-600 text-center mt-4">Message sent successfully!</p>
+        <p className="text-green-600 text-center mt-4">
+          Message sent successfully! Redirecting...
+        </p>
       )}
+
       {status === 'error' && (
-        <p className="text-red-600 text-center mt-4">{errorMessage}</p>
+        <p className="text-red-600 text-center mt-4">
+          {errorMessage}
+        </p>
       )}
     </form>
   );

@@ -4,17 +4,15 @@ import { GraduationCap, Calendar, Award } from "lucide-react";
 interface EducationCardProps {
   degree: string;
   institution: string;
-  period: string;
   score: string;
   isLast: boolean;
 }
 
-export function EducationCard({ 
-  degree, 
-  institution, 
-  period, 
-  score, 
-  isLast 
+export function EducationCard({
+  degree,
+  institution,
+  score,
+  isLast
 }: EducationCardProps) {
   return (
     <div className="relative group bg-gray-200 dark:bg-gray-800 p-4 sm:p-8 rounded-xl shadow-lg hover:shadow-xl border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400">
@@ -34,12 +32,6 @@ export function EducationCard({
           <p className="text-blue-600 dark:text-blue-400 font-medium">{institution}</p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mt-3">
-            {/* Period */}
-            <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
-              <Calendar className="w-4 h-4" />
-              <span className="text-sm">{period}</span>
-            </div>
-
             {/* Score */}
             <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
               <Award className="w-4 h-4" />

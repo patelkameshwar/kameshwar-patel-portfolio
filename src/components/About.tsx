@@ -59,7 +59,7 @@ export function About() {
         {/* Introduction */}
         <div className="max-w-5xl mx-auto mb-16 text-center">
           <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            Hey there! 👋 I'm <span className="text-blue-600 font-semibold">Amit Kumar</span>,
+            Hey there! 👋 I'm <span className="text-blue-600 font-semibold">Kameshwar Patel</span>,
             a Full-Stack Developer, AI/ML enthusiast, and founder of TechieHelp.
             I love transforming ideas into scalable web applications and solving complex coding challenges. 
             My journey in tech revolves around continuous learning, experimenting with new technologies, and building solutions that make an impact.

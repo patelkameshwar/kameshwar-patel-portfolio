@@ -4,22 +4,19 @@ import { EducationCard } from './ui/EducationCard';
 
 const education = [
   {
-    degree: 'B.Tech in Computer Science Engineering (AI & ML)',
+    degree: 'Master of Computer Applications',
     institution: 'JIET Group of Institutions, Jodhpur',
-    period: '2023 - 2027',
-    score: '8.13 CGPA',
+    score: '8.23 CGPA',
+  },
+  {
+    degree: 'Bachelor of Computer Applications',
+    institution: 'Mahatma Gandhi Kashi Vidyapith University, Varanasi',
+    score: '59.75%',
   },
   {
     degree: 'Senior Secondary (XII)',
-    institution: 'C.N College, Muzaffarpur, Bihar',
-    period: '2021 - 2023',
-    score: '72.5%',
-  },
-  {
-    degree: 'Secondary (X)',
-    institution: "M High School Baidhyanathpur, Muzaffarpur, Bihar",
-    period: '2020 - 2021',
-    score: '67%',
+    institution: "Rana Vikram Inter College (RVIC), Varanasi",
+    score: '65%',
   },
 ];
 

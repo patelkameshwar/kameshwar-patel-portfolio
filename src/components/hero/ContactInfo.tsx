@@ -27,13 +27,13 @@ export function ContactInfo() {
     <div className="flex flex-col items-center gap-0">
       <ContactItem
         icon={<Phone className="w-5 h-5" />}
-        text="+91 7673825079"
-        href="tel:+917673825079"
+        text="+91 8877396336"
+        href="tel:+918877396336"
       />
       <ContactItem
         icon={<Mail className="w-5 h-5" />}
-        text="amitk25783@gmail.com"
-        href="mailto:amitk25783@gmail.com"
+        text="patelkameshwar01@gmail.com"
+        href="mailto:patelkameshwar01@gmail.com"
       />
       <ContactItem
         icon={<MapPin className="w-5 h-5" />}

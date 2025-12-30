@@ -8,12 +8,9 @@ import { ActionButtons } from './hero/ActionButtons';
 
 export function Hero() {
   const roles = [
-    "Full-Stack Developer",
-    "AI/ML Enthusiast",
+    "Frontend-Developer",
+    "MernStack-Developer",
     "Open Source Contributor",
-    "Founder of TechieHelp",
-    "Student Executive at Unstop", 
-    "DSA Enthusiast",
     "Problem Solver",
     "Content Creator",
     "Tech Innovator",
@@ -42,7 +39,7 @@ export function Hero() {
               Hey! <span className="inline-block origin-[70%_70%] animate-wave">👋</span> I'm
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent animate-gradient">
-                Amit Kumar
+                Kameshwar Patel
               </h1>
               <div className="text-xl md:text-2xl text-gray-600 dark:text-gray-300">
                 I'm a <TypeWriter words={roles} delay={100} />
@@ -64,8 +61,8 @@ export function Hero() {
 
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
             <img
-              src="/assets/amit_pic.jpg"
-              alt="Amit Kumar"
+              src="/assets/kaushal_pic.jpg"
+              alt="Kameshwar Patel"
               className="relative w-3/5 max-w-md mx-auto rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
             />
           </div>
