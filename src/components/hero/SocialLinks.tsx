@@ -2,7 +2,7 @@ import { Github, Linkedin, Instagram } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { SiHackerrank } from 'react-icons/si'; 
-import { MdEmojiEvents } from 'react-icons/md'; // Unstop icon (closest match)
+import { MdEmojiEvents } from 'react-icons/md'; 
 
 const links = [
   {
@@ -16,25 +16,14 @@ const links = [
     label: 'LinkedIn',
   },
   {
-    href: 'https://wa.me/917673825079',
+    href: '',
     icon: <FaWhatsapp className="w-6 h-6 text-[#25D366]" />,
     label: 'WhatsApp',
   },
   {
-    href: 'https://x.com/AmitKum5579044',
+    href: '',
     icon: <FaXTwitter className="w-6 h-6 text-gray-900 dark:text-white" />,
     label: 'Twitter',
-  },
-
-  {
-    href: 'https://unstop.com/u/amitkum6013',
-    icon: <MdEmojiEvents className="w-6 h-6 text-[#800080]" />, // Unstop (using trophy icon)
-    label: 'Unstop',
-  },
-  {
-    href: 'https://www.hackerrank.com/profile/lbgofficial12345',
-    icon: <SiHackerrank className="w-6 h-6 text-[#2EC866]" />,
-    label: 'HackerRank',
   },
 ];
 

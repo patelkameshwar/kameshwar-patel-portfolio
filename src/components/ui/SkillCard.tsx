@@ -19,12 +19,10 @@ export function SkillCard({ name, icon: Icon, color, url }: SkillCardProps) {
         before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-br before:from-transparent before:to-[var(--glow-color,rgba(255,255,255,0))] before:opacity-0 before:blur-lg before:transition-all before:duration-500 hover:before:opacity-50"
       style={{ "--glow-color": color } as React.CSSProperties}
     >
-      {/* Icon with Background */}
       <div className="p-3 rounded-full transition-all duration-300 group-hover:scale-110" style={{ backgroundColor: `${color}1A` }}>
         <Icon size={50} color={color} className="group-hover:brightness-100" />
       </div>
 
-      {/* Skill Name */}
       <span className="mt-2 text-sm font-medium text-gray-900 dark:text-gray-100">{name}</span>
     </a>
   );

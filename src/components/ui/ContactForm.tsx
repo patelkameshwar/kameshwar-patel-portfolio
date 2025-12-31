@@ -8,7 +8,7 @@ export function ContactForm() {
     name: '',
     email: '',
     message: '',
-    _gotcha: '', // honeypot field for spam protection
+    _gotcha: '', 
   });
 
   const [status, setStatus] = useState<Status>('idle');
@@ -33,7 +33,7 @@ export function ContactForm() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json', // IMPORTANT for Formspree
+          'Accept': 'application/json', 
         },
         body: JSON.stringify(formData),
       });
@@ -48,9 +48,8 @@ export function ContactForm() {
           _gotcha: '',
         });
 
-        // Redirect after success (1.5s delay)
         setTimeout(() => {
-          window.location.href = '/thank-you'; // change if needed
+          window.location.href = '/thank-you'; 
         }, 1500);
       } else {
         const errorData = await response.json();
@@ -66,7 +65,6 @@ export function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
 
-      {/* Honeypot field (hidden) */}
       <input
         type="text"
         name="_gotcha"

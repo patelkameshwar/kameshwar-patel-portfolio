@@ -15,7 +15,6 @@ export function BlogCard({ title, brief, coverImage, slug }: BlogCardProps) {
       rel="noopener noreferrer"
       className="block overflow-hidden rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 bg-white dark:bg-gray-900 hover:shadow-xl"
     >
-      {/* Blog Cover Image */}
       {coverImage ? (
         <img
           src={coverImage}
@@ -28,7 +27,6 @@ export function BlogCard({ title, brief, coverImage, slug }: BlogCardProps) {
         </div>
       )}
 
-      {/* Blog Content */}
       <div className="p-5">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white line-clamp-2">
           {title}
@@ -38,7 +36,6 @@ export function BlogCard({ title, brief, coverImage, slug }: BlogCardProps) {
         </p>
       </div>
 
-      {/* Read More Button */}
       <div className="px-5 pb-4">
         <span className="inline-block text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline">
           Read More →

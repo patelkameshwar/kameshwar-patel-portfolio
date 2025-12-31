@@ -28,7 +28,6 @@ export function TypeWriter({
           setTimeout(() => setIsDeleting(true), 1000);
         }
       } else {
-        // Deleting Effect
         if (currentText.length > 1) {
           setCurrentText(word.slice(0, currentText.length - 2) + "|"); 
         } else {

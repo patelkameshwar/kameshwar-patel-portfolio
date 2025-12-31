@@ -8,11 +8,12 @@ const experiences = [
     title: "Mern-Stack Intern",
     company: "TechieHelp",
     period: "Dec 2025 – Present ",
-    description: `Launched and managed the Campus Ambassador Program for Reckon 6.0, overseeing the recruitment and coordination of campus ambassadors to promote the hackathon. 
-      Handled student registration on Unstop, ensuring smooth onboarding and accurate data entry for participants. 
-      Coordinated with campus ambassadors, providing them with the necessary resources and support to successfully promote Reckon 6.0 within their campuses. 
-      Worked closely with the technical team to resolve any registration issues and streamline the event's processes. 
-      Contributed to the overall success of the event by ensuring high engagement and participation through the campus ambassador network.`,
+    description: `Contributed to the core project and official website of TechieHelp, focusing on web development and platform improvements.  
+Worked on implementing new features, enhancing user experience, and optimizing the website for better performance.  
+Collaborated with the team to ensure smooth functionality and maintain high code quality across the platform.  
+Assisted in managing content, layouts, and interactive elements to improve the overall usability of the site.  
+Worked on client projects, developing and delivering custom web solutions according to client requirements.  
+Contributed to the growth and effectiveness of TechieHelp by helping create a seamless experience for students seeking internships, career guidance, and tech services.`,
     skills: ["React.js", "Node.js", "Express.js", "MongoDB", "Git & Github", "Vercel/Render", "Debugging", "OpenSource Contribution", "Team Collaboration"]
   },  
   {

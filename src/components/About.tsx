@@ -7,9 +7,9 @@ const aboutSections = [
     icon: User2,
     title: "Who I Am",
     description: [
-      "A full-stack developer and AI/ML enthusiast.",
-      "Enjoy solving problems and building scalable applications.",
-      "Always learning new technologies to improve my skills.",
+     "Full-stack developer focused on scalable web apps.",
+     "Enjoy solving problems with clean code.",
+     "Always learning new technologies to improve my skills.",
     ],
     color: "bg-blue-600",
   },
@@ -17,9 +17,10 @@ const aboutSections = [
     icon: Code2,
     title: "What I Do",
     description: [
-      "Develop high-performance web apps using modern tech stacks.",
-      "Solve algorithmic problems and optimize code efficiency.",
-      "Contribute to open-source and follow industry trends.",
+      "Build high-performance web apps with modern stacks.",
+      "Solve problems and optimize code efficiency.",
+      "Contribute to open source and track industry trends."
+
     ],
     color: "bg-purple-600",
   },
@@ -27,9 +28,10 @@ const aboutSections = [
     icon: GoGoal,
     title: "My Goals",
     description: [
-      "Build AI-driven tech products that solve real-world challenges.",
-      "Advance as a full-stack developer and AI/ML engineer.",
-      "Grow the dev community through open-source contributions and mentorship.",
+      "Build impactful tech products for real-world problems.",
+      "Grow as a Mern Stack developer.",
+      "Support the dev community through open source.",
+
     ],
     color: "bg-green-600",
   },
@@ -38,7 +40,7 @@ const aboutSections = [
     title: "My Philosophy",
     description: [
       "Technology should simplify lives, not complicate them.",
-      "Great software solves problems, not just writes code.",
+      "Great website solves problems, not just writes code.",
       "Continuous learning keeps you ahead in tech.",
     ],
     color: "bg-orange-600",
@@ -60,14 +62,15 @@ export function About() {
         <div className="max-w-5xl mx-auto mb-16 text-center">
           <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             Hey there! 👋 I'm <span className="text-blue-600 font-semibold">Kameshwar Patel</span>,
-            a Full-Stack Developer, AI/ML enthusiast, and founder of TechieHelp.
-            I love transforming ideas into scalable web applications and solving complex coding challenges. 
+            A Full-Stack Developer passionate about building scalable web applications.
+            I enjoy transforming ideas into working solutions and solving complex problems. 
             My journey in tech revolves around continuous learning, experimenting with new technologies, and building solutions that make an impact.
           </p>
 
           <div className="mt-6 flex justify-center">
             <span className="text-sm sm:text-base inline-block bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 px-4 py-2 rounded-lg shadow">
-              🚀 I like to build AI-driven products and solve real-world problems
+              🚀 Focused on building scalable full-stack solutions for real-world use cases
+
             </span>
           </div>
         </div>

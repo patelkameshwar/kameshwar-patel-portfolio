@@ -36,7 +36,7 @@ export function ProjectCard({ title, description, image, link, tags }: ProjectCa
             </a>
             {/* GitHub Link */}
             <a
-              href={`https://github.com/amitkumardemo/${title.toLowerCase()}`}
+              href={`https://github.com/patelkameshwar/${title.toLowerCase()}`}
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white/20 rounded-full hover:bg-gray-900 hover:scale-110 transition-transform duration-300 ease-in-out shadow-lg"
