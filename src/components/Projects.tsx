@@ -14,7 +14,7 @@ const projects = [
     title: 'TechieHelp',
     description: 'TechieHelp – Contributed to the development of TechieHelp’s core platform and website. Worked on web development, feature implementation, and platform enhancements for a platform providing internships, career guidance, AI/ML solutions, UI/UX, and placement support.',
     image: '/assets/techie.png',
-    link: 'https://techiehelp.netlify.app/',
+    link: 'https://www.techiehelp.in/',
     tags: ['React.js', 'Html', 'Css', 'JavaScript', 'Node.js', 'Tailwind CSS','Firebase'],
   },
   {
