@@ -48,9 +48,6 @@ export function ContactForm() {
           _gotcha: '',
         });
 
-        setTimeout(() => {
-          window.location.href = '/thank-you'; 
-        }, 1500);
       } else {
         const errorData = await response.json();
         setErrorMessage(errorData?.error || 'Something went wrong. Please try again.');
@@ -138,7 +135,7 @@ export function ContactForm() {
 
       {status === 'success' && (
         <p className="text-green-600 text-center mt-4">
-          Message sent successfully! Redirecting...
+          Message sent successfully!
         </p>
       )}
 
