@@ -15,12 +15,16 @@ import {
   SiGithub,
   SiPostman,
   SiVite,
+  SiAxios,
+  SiSocketdotio,
+  SiAmazonwebservices,
+  SiTerraform,
+  SiCloudinary,
 } from "react-icons/si";
 
-import { FaNodeJs } from "react-icons/fa";
+import { FaNodeJs, FaServer } from "react-icons/fa";
 
-const skills = [
-  // Frontend
+const frontendSkills = [
   {
     name: "HTML5",
     icon: SiHtml5,
@@ -57,8 +61,9 @@ const skills = [
     color: "#764abc",
     url: "https://redux.js.org/",
   },
+];
 
-  // Backend
+const backendSkills = [
   {
     name: "Node.js",
     icon: FaNodeJs,
@@ -71,16 +76,60 @@ const skills = [
     color: "#000000",
     url: "https://expressjs.com/",
   },
+  {
+    name: "REST APIs",
+    icon: FaServer,
+    color: "#2563eb",
+    url: "https://developer.mozilla.org/en-US/docs/Glossary/REST",
+  },
+  {
+    name: "Axios",
+    icon: SiAxios,
+    color: "#5a29e4",
+    url: "https://axios-http.com/",
+  },
+  {
+    name: "JWT / Auth",
+    icon: FaServer,
+    color: "#111827",
+    url: "https://jwt.io/",
+  },
+  {
+    name: "Socket.IO",
+    icon: SiSocketdotio,
+    color: "#010101",
+    url: "https://socket.io/",
+  },
+];
 
-  // Database
+const databaseCloudSkills = [
   {
     name: "MongoDB",
     icon: SiMongodb,
     color: "#47a248",
     url: "https://www.mongodb.com/",
   },
+  {
+    name: "Cloudinary",
+    icon: SiCloudinary,
+    color: "#3448c5",
+    url: "https://cloudinary.com/",
+  },
+  {
+    name: "AWS",
+    icon: SiAmazonwebservices,
+    color: "#ff9900",
+    url: "https://aws.amazon.com/",
+  },
+  {
+    name: "Terraform",
+    icon: SiTerraform,
+    color: "#7b42bc",
+    url: "https://www.terraform.io/",
+  },
+];
 
-  // Tools
+const toolsSkills = [
   {
     name: "Git",
     icon: SiGit,
@@ -107,90 +156,60 @@ const skills = [
   },
 ];
 
+function SkillGroup({
+  title,
+  skills,
+}: {
+  title: string;
+  skills: typeof frontendSkills;
+}) {
+  return (
+    <div className="mb-10 last:mb-0">
+      <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-5 text-center">
+        {title}
+      </h3>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        {skills.map((tech) => (
+          <SkillCard
+            key={tech.name}
+            name={tech.name}
+            icon={tech.icon}
+            color={tech.color}
+            url={tech.url}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export function Skills() {
   return (
     <section id="skills" className="py-20">
       <div className="container mx-auto px-6">
         <SectionTitle>Skills</SectionTitle>
 
-        <div className="max-w-5xl mx-auto">
-          {/* Frontend */}
-          <div className="mb-10">
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-5 text-center">
-              Frontend Development
-            </h3>
+        <div className="max-w-6xl mx-auto">
+          <SkillGroup
+            title="Frontend Development"
+            skills={frontendSkills}
+          />
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-              {skills
-                .filter((skill) =>
-                  [
-                    "HTML5",
-                    "CSS3",
-                    "JavaScript",
-                    "React.js",
-                    "Tailwind CSS",
-                    "Redux",
-                  ].includes(skill.name)
-                )
-                .map((tech) => (
-                  <SkillCard
-                    key={tech.name}
-                    name={tech.name}
-                    icon={tech.icon}
-                    color={tech.color}
-                    url={tech.url}
-                  />
-                ))}
-            </div>
-          </div>
+          <SkillGroup
+            title="Backend & APIs"
+            skills={backendSkills}
+          />
 
-          {/* Backend & Database */}
-          <div className="mb-10">
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-5 text-center">
-              Backend & Database
-            </h3>
+          <SkillGroup
+            title="Database & Cloud"
+            skills={databaseCloudSkills}
+          />
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
-              {skills
-                .filter((skill) =>
-                  ["Node.js", "Express.js", "MongoDB"].includes(skill.name)
-                )
-                .map((tech) => (
-                  <SkillCard
-                    key={tech.name}
-                    name={tech.name}
-                    icon={tech.icon}
-                    color={tech.color}
-                    url={tech.url}
-                  />
-                ))}
-            </div>
-          </div>
-
-          {/* Tools */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-5 text-center">
-              Tools & Workflow
-            </h3>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              {skills
-                .filter((skill) =>
-                  ["Git", "GitHub", "Postman", "Vite"].includes(
-                    skill.name
-                  )
-                )
-                .map((tech) => (
-                  <SkillCard
-                    key={tech.name}
-                    name={tech.name}
-                    icon={tech.icon}
-                    color={tech.color}
-                    url={tech.url}
-                  />
-                ))}
-            </div>
-          </div>
+          <SkillGroup
+            title="Tools & Workflow"
+            skills={toolsSkills}
+          />
         </div>
       </div>
     </section>

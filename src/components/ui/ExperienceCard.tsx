@@ -17,39 +17,72 @@ export function ExperienceCard({
   skills,
 }: ExperienceCardProps) {
   return (
-    <div className="relative group pl-6 sm:pl-10">
-      <div className="absolute left-[-16px] top-4 w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full border-4 border-white dark:border-gray-900"></div>
+    <div className="relative pl-6 sm:pl-10">
+      {/* Timeline Dot */}
+      <div className="absolute left-[-17px] top-6 w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full border-4 border-white dark:border-gray-900 flex items-center justify-center">
+        <div className="w-2.5 h-2.5 bg-white rounded-full" />
+      </div>
 
-      <div className="relative bg-gray-200 dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow-lg border border-gray-300 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-xl">
+      {/* Experience Card */}
+      <div className="bg-white dark:bg-gray-900 p-5 sm:p-7 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-lg hover:border-blue-400 dark:hover:border-blue-500 transition-all duration-300">
         
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-        <div className="relative z-10">
-          <div className="flex items-center gap-4">
-            <div className="p-3 sm:p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
-              <Briefcase className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200">{title}</h3>
-              <p className="text-base text-blue-600 dark:text-blue-400">{company}</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{period}</p>
-            </div>
+        {/* Header */}
+        <div className="flex items-start gap-4">
+          <div className="shrink-0 p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg">
+            <Briefcase className="w-6 h-6 text-blue-600 dark:text-blue-400" />
           </div>
 
-          <ul className="mt-3 space-y-2 text-gray-700 dark:text-gray-300">
-            {description.split("\n").map((line, index) => (
-              <li key={index} className="flex items-start gap-2">
-                <span className="text-blue-600 dark:text-blue-400 font-bold">•</span> 
-                <span>{line}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="min-w-0">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+              {title}
+            </h3>
 
-          <div className="mt-4 flex flex-wrap gap-2">
+            <p className="mt-1 text-base font-medium text-blue-600 dark:text-blue-400">
+              {company}
+            </p>
+
+            <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+              {period}
+            </p>
+          </div>
+        </div>
+
+        {/* Responsibilities */}
+        <div className="mt-6">
+          <h4 className="text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-3">
+            Key Contributions
+          </h4>
+
+          <ul className="space-y-2.5">
+            {description.split("\n").map((line, index) => {
+              const cleanLine = line.trim();
+
+              if (!cleanLine) return null;
+
+              return (
+                <li
+                  key={index}
+                  className="flex items-start gap-3 text-sm sm:text-base leading-6 text-gray-700 dark:text-gray-300"
+                >
+                  <span className="mt-2 w-1.5 h-1.5 shrink-0 rounded-full bg-blue-600 dark:bg-blue-400" />
+                  <span>{cleanLine}</span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        {/* Technologies */}
+        <div className="mt-6">
+          <h4 className="text-sm font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-3">
+            Technologies & Skills
+          </h4>
+
+          <div className="flex flex-wrap gap-2">
             {skills.map((skill, index) => (
               <span
-                key={index}
-                className="px-3 py-1 text-sm font-medium bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-full"
+                key={`${skill}-${index}`}
+                className="px-3 py-1.5 text-xs sm:text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 rounded-md"
               >
                 {skill}
               </span>
