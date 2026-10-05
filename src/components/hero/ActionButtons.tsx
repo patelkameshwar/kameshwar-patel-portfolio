@@ -17,6 +17,7 @@ export function ActionButtons() {
         href="/assets/Kameshwar_resume.pdf"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="View Kameshwar Patel's resume"
         className="flex items-center gap-2 px-5 py-2.5 rounded-md text-sm sm:text-base text-blue-600 dark:text-blue-400 border-2 border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-transform duration-300 hover:scale-105"
       >
         <FileText className="w-5 h-5" />

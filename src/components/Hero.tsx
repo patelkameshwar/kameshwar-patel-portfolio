@@ -10,7 +10,7 @@ export function Hero() {
   const roles = [
     "Frontend Developer",
     "React Developer",
-    "MERN Stack-Developer",
+    "MERN Stack Developer",
   ];
 
   return (
@@ -45,9 +45,21 @@ export function Hero() {
                 I'm a <TypeWriter words={roles} delay={100} />
               </div>
               <p className="max-w-xl text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                I build responsive and user-focused web applications using
-                React, JavaScript, Node.js and MongoDB.
+                I build responsive, user-focused web applications with React and
+                JavaScript, and work across the MERN stack with REST APIs,
+                authentication, real-time features, and cloud deployment.
               </p>
+              <div className="flex flex-wrap justify-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                <span className="px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800">
+                  MCA Graduate
+                </span>
+                <span className="px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800">
+                  MERN Stack
+                </span>
+                <span className="px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800">
+                  Frontend Focused
+                </span>
+              </div>
             </div>
 
             <ContactInfo />
@@ -61,7 +73,7 @@ export function Hero() {
 
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
             <img
-              src="/assets/kaushal_pic.jpg"
+              src="/assets/kameshwar-patel.jpg"
               alt="Kameshwar Patel"
               className="relative w-3/5 max-w-md mx-auto rounded-full shadow-2xl transform hover:scale-105 transition-transform duration-500"
             />

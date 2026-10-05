@@ -1,51 +1,61 @@
-import React from 'react';
-import { SectionTitle } from './ui/SectionTitle';
-import { ContactForm } from './ui/ContactForm';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import React from "react";
+import { SectionTitle } from "./ui/SectionTitle";
+import { ContactForm } from "./ui/ContactForm";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export function Contact() {
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4">
         <SectionTitle>Get In Touch</SectionTitle>
-        
+
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
           {/* Left Column: Contact Info */}
           <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-100">Let's Connect</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-100">
+              Let's Connect
+            </h3>
+
             <p className="text-gray-600 dark:text-gray-300 mb-8">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+              I'm open to frontend, React, and junior MERN opportunities,
+              as well as opportunities to work on real-world web projects
+              and collaborate with development teams.
             </p>
 
             <div className="space-y-4">
               <a
                 href="mailto:patelkameshwar01@gmail.com"
-                className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                aria-label="Send email to Kameshwar Patel"
+                className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 <Mail className="w-6 h-6" />
                 <span>patelkameshwar01@gmail.com</span>
               </a>
+
               <a
                 href="https://github.com/patelkameshwar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                aria-label="Visit GitHub profile"
+                className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 <Github className="w-6 h-6" />
                 <span>github.com/patelkameshwar</span>
               </a>
+
               <a
                 href="https://www.linkedin.com/in/patelkameshwar/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                aria-label="Visit LinkedIn profile"
+                className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
               >
                 <Linkedin className="w-6 h-6" />
                 <span>linkedin.com/in/patelkameshwar</span>
               </a>
             </div>
           </div>
-          
+
           {/* Right Column: Contact Form */}
           <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-lg">
             <ContactForm />

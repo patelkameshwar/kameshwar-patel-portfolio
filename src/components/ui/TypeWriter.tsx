@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 interface TypeWriterProps {
   words: string[];
@@ -14,33 +14,45 @@ export function TypeWriter({
   gradient = true,
 }: TypeWriterProps) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [currentText, setCurrentText] = useState("|"); // Start with the cursor
+  const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
+    if (!words.length) return;
+
     const word = words[currentWordIndex];
 
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        if (currentText.length < word.length + 1) {
-          setCurrentText(word.slice(0, currentText.length) + "|"); 
+    const timeout = setTimeout(
+      () => {
+        if (!isDeleting) {
+          const nextText = word.slice(0, currentText.length + 1);
+          setCurrentText(nextText);
+
+          if (nextText === word) {
+            setTimeout(() => setIsDeleting(true), 1000);
+          }
         } else {
-          setTimeout(() => setIsDeleting(true), 1000);
+          const nextText = word.slice(0, currentText.length - 1);
+          setCurrentText(nextText);
+
+          if (nextText === "") {
+            setIsDeleting(false);
+
+            if (infinite) {
+              setCurrentWordIndex((prev) => (prev + 1) % words.length);
+            } else {
+              setCurrentWordIndex((prev) =>
+                Math.min(prev + 1, words.length - 1)
+              );
+            }
+          }
         }
-      } else {
-        if (currentText.length > 1) {
-          setCurrentText(word.slice(0, currentText.length - 2) + "|"); 
-        } else {
-          setIsDeleting(false);
-          setCurrentWordIndex((prev) =>
-            infinite ? (prev + 1) % words.length : Math.min(prev + 1, words.length - 1)
-          );
-        }
-      }
-    }, isDeleting ? delay / 1.5 : delay); 
+      },
+      isDeleting ? delay / 1.5 : delay
+    );
 
     return () => clearTimeout(timeout);
-  }, [currentText, isDeleting, currentWordIndex, words, delay, infinite]);
+  }, [currentText, currentWordIndex, isDeleting, words, delay, infinite]);
 
   return (
     <span
@@ -50,7 +62,10 @@ export function TypeWriter({
           : "text-blue-600 dark:text-blue-400"
       }`}
     >
-      <span className="whitespace-nowrap">{currentText}</span>
+      <span className="whitespace-nowrap">
+        {currentText}
+        <span className="animate-pulse">|</span>
+      </span>
     </span>
   );
 }

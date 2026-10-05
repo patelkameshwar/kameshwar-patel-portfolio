@@ -156,13 +156,14 @@ const toolsSkills = [
   },
 ];
 
-function SkillGroup({
-  title,
-  skills,
-}: {
-  title: string;
-  skills: typeof frontendSkills;
-}) {
+interface Skill {
+  name: string;
+  icon: any;
+  color: string;
+  url: string;
+}
+
+function SkillGroup({ title, skills }: { title: string; skills: Skill[] }) {
   return (
     <div className="mb-10 last:mb-0">
       <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-5 text-center">
@@ -191,25 +192,13 @@ export function Skills() {
         <SectionTitle>Skills</SectionTitle>
 
         <div className="max-w-6xl mx-auto">
-          <SkillGroup
-            title="Frontend Development"
-            skills={frontendSkills}
-          />
+          <SkillGroup title="Frontend Development" skills={frontendSkills} />
 
-          <SkillGroup
-            title="Backend & APIs"
-            skills={backendSkills}
-          />
+          <SkillGroup title="Backend & APIs" skills={backendSkills} />
 
-          <SkillGroup
-            title="Database & Cloud"
-            skills={databaseCloudSkills}
-          />
+          <SkillGroup title="Database & Cloud" skills={databaseCloudSkills} />
 
-          <SkillGroup
-            title="Tools & Workflow"
-            skills={toolsSkills}
-          />
+          <SkillGroup title="Tools & Workflow" skills={toolsSkills} />
         </div>
       </div>
     </section>

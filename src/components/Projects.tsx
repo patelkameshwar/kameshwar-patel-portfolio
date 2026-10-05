@@ -9,7 +9,7 @@ const projects = [
       "Built a full-stack doctor appointment platform with separate authentication and dashboards for patients, doctors, and admins. Implemented appointment booking and management, doctor profiles, earnings tracking, and admin controls.",
     image: "/assets/meetdoc.png",
     link: "https://presto-meetdoc.onrender.com",
-    github: "ADD_YOUR_ACTUAL_GITHUB_REPO_URL",
+    github: "https://github.com/patelkameshwar/Presto",
     tags: [
       "React.js",
       "Node.js",
@@ -28,7 +28,7 @@ const projects = [
       "Contributed to TechieHelp's core platform and official website during my internship. Worked on responsive UI, new features, bug fixes, performance improvements, client websites, and platform enhancements based on requirements.",
     image: "/assets/techie.png",
     link: "https://www.techiehelp.in/",
-    github: "",
+    github: "https://github.com/patelkameshwar/TechieHelp.in",
     tags: [
       "React.js",
       "TypeScript",

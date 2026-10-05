@@ -30,13 +30,13 @@ function App() {
         <Hero />
         <About />
         <Skills />
+        <Experience />
         <Projects />
         <GitHub />
-        <Badges />
-        <Blogs />
-        <Experience />
         <Certifications />
         <Education />
+        <Badges />
+        <Blogs />
         <Contact />
         <Footer />
         <Analytics />

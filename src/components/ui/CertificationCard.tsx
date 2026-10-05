@@ -18,28 +18,52 @@ export function CertificationCard({
 }: CertificationCardProps) {
   return (
     <div className="relative bg-white dark:bg-gray-900 rounded-lg shadow-xl transition-transform duration-300 overflow-hidden group">
+      
+      {/* Certificate Image */}
       <img
         src={image}
-        alt={`${title} certification`}
+        alt={`${title} certificate`}
         className="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-105"
       />
+
+      {/* Hover Overlay */}
       <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-80 transition-opacity duration-300" />
+
+      {/* Certificate Details */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        
         <div className="p-3 bg-blue-600 dark:bg-blue-700 rounded-lg mb-4">
           <Award className="w-8 h-8" />
         </div>
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
-        <p className="text-sm text-gray-300 mb-1">{issuer}</p>
-        <p className="text-sm text-gray-400 mb-4">{date}</p>
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-sm font-medium hover:bg-blue-600 px-4 py-2 rounded-lg border border-blue-600 hover:border-blue-600 transition-transform duration-300 transform hover:scale-105"
-        >
-          <span>Verify</span>
-          <ExternalLink className="w-4 h-4" />
-        </a>
+
+        <h3 className="text-xl font-semibold mb-2">
+          {title}
+        </h3>
+
+        {issuer && (
+          <p className="text-sm text-gray-300 mb-1">
+            {issuer}
+          </p>
+        )}
+
+        {date && (
+          <p className="text-sm text-gray-400 mb-4">
+            {date}
+          </p>
+        )}
+
+        {/* Verify only when a real URL exists */}
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-sm font-medium hover:bg-blue-600 px-4 py-2 rounded-lg border border-blue-600 hover:border-blue-600 transition-transform duration-300 transform hover:scale-105"
+          >
+            <span>Verify</span>
+            <ExternalLink className="w-4 h-4" />
+          </a>
+        )}
       </div>
     </div>
   );

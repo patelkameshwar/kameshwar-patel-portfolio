@@ -9,12 +9,12 @@ export function HandwritingAnimation() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1.2, ease: "easeInOut" }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
       className="w-full h-screen flex items-center justify-center bg-white dark:bg-gray-900"
     >
       <svg
         viewBox="0 0 1158.6 200.001"
-        className="max-w-full max-h-full ml-16 md:ml-48" 
+        className="w-[85%] max-w-5xl h-auto"
       >
         {letterPaths.map((letter, index) => (
           <motion.path
@@ -32,28 +32,27 @@ export function HandwritingAnimation() {
             animate={{
               pathLength: 1,
               opacity: 1,
-              fill: animationCompleted ? "#3b82f6" : "transparent", 
+              fill: animationCompleted
+                ? "#3b82f6"
+                : "transparent",
             }}
             transition={{
               pathLength: {
-                duration: 1.5, 
-                delay: index * 0.2, 
-                ease: [0.42, 0, 0.58, 1],
-              },
-              opacity: {
-                duration: 1,
-                delay: index * 0.2,
+                duration: 0.65,
+                delay: index * 0.08,
                 ease: "easeInOut",
               },
+              opacity: {
+                duration: 0.3,
+                delay: index * 0.08,
+              },
               fill: {
-                duration: 0.8, 
-                delay: 0, 
+                duration: 0.4,
                 ease: "easeInOut",
               },
             }}
-            className={`text-blue-600 dark:text-blue-400`}
+            className="text-blue-600 dark:text-blue-400"
             onAnimationComplete={() => {
-              
               if (index === letterPaths.length - 1) {
                 setAnimationCompleted(true);
               }

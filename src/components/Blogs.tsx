@@ -15,7 +15,7 @@ export function Blogs() {
           <p className="text-center text-gray-500 dark:text-gray-400">
             Loading blogs...
           </p>
-        ) : (
+        ) : blogs.length > 0 ? (
           <>
             <div className="max-w-6xl mx-auto grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
               {blogs.map((blog) => (
@@ -23,19 +23,21 @@ export function Blogs() {
               ))}
             </div>
 
-            {/* "See All Blogs" Button */}
             <div className="mt-10 text-center">
               <a
-                href="https://patelkameshwar.hashnode.dev
-"
+                href="https://patelkameshwar.hashnode.dev"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 text-lg font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 transition-all"
+                className="inline-flex items-center justify-center px-6 py-3 text-sm sm:text-base font-semibold text-white bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 View More Articles →
               </a>
             </div>
           </>
+        ) : (
+          <p className="text-center text-gray-500 dark:text-gray-400">
+            No articles available at the moment.
+          </p>
         )}
       </div>
     </section>
