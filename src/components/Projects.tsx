@@ -18,7 +18,26 @@ const projects = [
       "JWT",
       "REST API",
       "Tailwind CSS",
-      "Render",
+      "Chatbot",
+    ],
+  },
+
+  {
+    title: "CityPortal",
+    description:
+      "A full-stack city tourism and booking platform where users can explore and book hotels, events, and tourism services. Includes authentication, role-based dashboards, booking management, admin CRUD operations, and integrated APIs.",
+    image: "/assets/cityportal.png",
+    link: "https://cityportal-frontend.onrender.com/",
+    github: "https://github.com/patelkameshwar/CityPortal",
+    tags: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "OAuth",
     ],
   },
 
@@ -31,13 +50,31 @@ const projects = [
     github: "https://github.com/patelkameshwar/TechieHelp.in",
     tags: [
       "React.js",
-      "TypeScript",
+      "JavaScript",
       "HTML",
       "CSS",
       "Tailwind CSS",
       "Node.js",
       "Firebase",
+      "Open Source",
       "Git",
+    ],
+  },
+
+  {
+    title: "TrevorOS – Open Source Contribution",
+    description:
+      "Contributed to TrevorOS by fixing bugs, implementing new features, improving responsive design, and collaborating with maintainers and developers on the shared codebase. Worked directly with Git/GitHub and pushed changes to the main branch.",
+    image: "/assets/trevoros.png",
+    link: "https://www.trevoros.com/",
+    github: "YOUR_REPOSITORY_LINK",
+    tags: [
+      "React",
+      "JavaScript",
+      "Git",
+      "GitHub",
+      "Open Source",
+      "Responsive Design",
     ],
   },
 
@@ -47,7 +84,7 @@ const projects = [
       "Developed a full-stack real-time chat application using Socket.IO. Implemented user authentication, message storage, instant messaging, and dynamic UI updates without page reloads.",
     image: "/assets/onlinechat.png",
     link: "https://quick-chat-opal.vercel.app/",
-    github: "ADD_YOUR_ACTUAL_GITHUB_REPO_URL",
+    github: "https://github.com/patelkameshwar/QuickChat",
     tags: [
       "React.js",
       "Node.js",
@@ -72,19 +109,13 @@ const projects = [
 
 export function Projects() {
   return (
-    <section
-      id="projects"
-      className="py-20 bg-gray-50 dark:bg-gray-800"
-    >
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-8">
         <SectionTitle>Projects</SectionTitle>
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <ProjectCard
-              key={project.title}
-              {...project}
-            />
+            <ProjectCard key={project.title} {...project} />
           ))}
         </div>
       </div>
